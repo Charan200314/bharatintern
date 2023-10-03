@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/css variables/
+* {
+    --primary: #141414;
+    --light: #F3F3F3;
+    --dark: #686868;
+}
+
+html,
+body {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    color: var(--light);
+    font-family: Arial, Helvetica, Sans-Serif;
+    box-sizing: border-box;
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    padding-top: 60px;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER */
+header {
+    padding: 20px 20px 0 20px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: var(--primary);
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+/NETFLIX LOGO STYLING/
+.netflixLogo {
+    /* grid-area: nt; */
+    object-fit: cover;
+    width: 100px;
+    max-height: 100%;
+
+    padding-left: 30px;
+    padding-top: 0px;
+}
+
+.netflixLogo img {
+    height: 35px;
+}
+
+#logo {
+    color: #E50914;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    padding: 0 30px 0 20px;
+}
+
+.main-nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.main-nav a:hover {
+    color: var(--dark);
+}
+
+.sub-nav {
+    padding: 0 40px 0 40px;
+}
+
+.sub-nav a {
+    color: var(--light);
+    text-decoration: none;
+    margin: 5px;
+}
+
+.sub-nav a:hover {
+    color: var(--dark);
+}
+
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100vh;
+}
+
+.home-movie-details-container {
+    background-image: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(24, 24, 24, 0.546875) 38.26%,
+            #131313 92.82%,
+            #131313 98.68%,
+            #131313 108.61%);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90vw;
+    padding-left: 10vw;
+    margin-top: 10vh;
+    padding-bottom: 5vh;
+}
+
+@media screen and (min-width: 768px) {
+    .home-movie-details-container {
+        margin-top: 18vh;
+        padding-left: 8vw;
+        padding-bottom: 6vh;
+    }
+}
+
+.home-movie-heading {
+    font-size: 38px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+    .home-movie-heading {
+        font-size: 48px;
+        font-weight: 600;
+    }
+}
+
+.home-movie-description {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Roboto';
+    color: #ffffff;
+    height: 63px;
+    width: 296px;
+    margin-top: 0px;
+    overflow-x: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .home-movie-description {
+        font-size: 20px;
+        height: 78px;
+        width: 632px;
+        margin-bottom: 22px;
+    }
+}
+
+.home-movie-play-button {
+    font-size: 12px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    background-color: #ffffff;
+    color: #171f46;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    width: 74px;
+}
+
+/* MAIN CONTIANER */
+.main-container {
+    padding: 50px;
+}
+
+.box {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(6, minmax(100px, 1fr));
+}
+
+.box a {
+    transition: transform .3s;
+}
+
+.box a:hover {
+    transition: transform .3s;
+    -ms-transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+.box img {
+    border-radius: 2px;
+}
+
+/* MEDIA QUERIES */
+
+@media(max-width: 900px) {
+
+    header {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "nt nt nt  .  .  . sb . . . "
+            "mn mn mn mn mn mn  mn mn mn mn";
+    }
+
+    .box {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+
+}
+
+@media(max-width: 700px) {
+
+    header {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "nt nt nt  .  .  . sb . . . "
+            "mn mn mn mn mn mn  mn mn mn mn";
+    }
+
+    .box {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+
+    .sub-links ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media(max-width: 500px) {
+
+    .wrapper {
+        font-size: 15px;
+    }
+
+    header {
+        margin: 0;
+        padding: 20px 0 0 0;
+        position: static;
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "nt"
+            "mn"
+            "sb";
+        text-align: center;
+    }
+
+    .netflixLogo {
+        max-width: 100%;
+        margin: auto;
+        padding-right: 20px;
+    }
+
+    .main-nav {
+        display: grid;
+        grid-gap: 0px;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .box {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+
+    .box a:hover {
+        transition: transform .3s;
+        -ms-transform: scale(1);
+        -webkit-transform: scale(1);
+        transform: scale(1.2);
+    }
+
+    .sub-links ul {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: var(--dark);
+    margin: 10px;
+}
+
+.logos a {
+    padding: 10px;
+}
+
+.logo {
+    color: var(--dark);
+}
