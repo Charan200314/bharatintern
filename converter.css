@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("https://img.freepik.com/premium-photo/man-holds-weather-station-device-background-sky-clouds_98862-1096.jpg?w=900");
+}
+
+.container {
+    /* text-align: top; */
+    margin-top: 100px;
+}
+
+.change {
+    margin-top: 20px;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    background-color: #ffb3d1;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: black;
+}
+
+label {
+    font-size: 30px;
+}
+
+button {
+    margin-top: 10px;
+    height: 30px;
+    width: 60px;
+    margin-left: 30px;
+    border-radius: 8px;
+    background-color: #ffb380;
+
+
+}
